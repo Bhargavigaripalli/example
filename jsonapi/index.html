@@ -1,0 +1,87 @@
+<html>
+  <head></head>
+  <body>
+    <button onclick="apidata()">Get Data</button>
+    <button onclick="postapidata()">Post API Data</button>
+    <button onclick="putdata()">Put Data</button>
+    <button onclick="patchdata()">Patch Data</button>
+    <button onclick="deletedata()">Delete Data</button>
+    <div id="datadiv"></div>
+    <script>
+      async function apidata() {
+        const res = await fetch("http://localhost:3000/students");
+        const newdata = await res.json();
+        console.log(newdata);
+        const parent = document.getElementById("datadiv");
+        parent.innerHTML = "";
+        newdata.forEach((val) => {
+          const child = document.createElement("div");
+          child.innerText = `${val.name} ${val.rollNumber} ${val.age} ${val.grade}`;
+          parent.appendChild(child);
+        });
+      }
+
+      const postObj = {
+        name: "Venu",
+        // id: 11,
+        rollNumber: "S011",
+        age: 27,
+        grade: "A",
+      };
+
+      const putObj = {
+        name: "Updated Venu",
+        // id: 11,
+        rollNumber: "S011",
+        age: 28,
+        grade: "B",
+      };
+      async function postapidata() {
+        const res = await fetch("http://localhost:3000/students", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json"
+
+          },
+          body: JSON.stringify(postObj),
+        });
+      
+        console.log(postObj);
+      }
+
+      async function putdata() {
+        const res = await fetch("http://localhost:3000/students/1", {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(putObj),
+        });
+         console.log(putdata)
+      }
+
+      async function patchdata() {
+        const res = await fetch("http://localhost:3000/students/1", {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(patchObj),
+        });
+      
+        console.log(patchObj);
+      }
+
+      async function deletedata() {
+        const res = await fetch("http://localhost:3000/students/1", {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await res.json();
+        console.log(data);
+      }
+    </script>
+  </body>
+</html>

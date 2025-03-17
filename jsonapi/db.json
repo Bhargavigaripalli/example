@@ -1,0 +1,82 @@
+{
+  "students": [
+    {
+      "name": "Jane Doe",
+      "id": 2,
+      "rollNumber": "S002",
+      "age": 22,
+      "grade": "B"
+    },
+    {
+      "name": "Bob Smith",
+      "id": 3,
+      "rollNumber": "S003",
+      "age": 21,
+      "grade": "A"
+    },
+    {
+      "name": "Alice Johnson",
+      "id": 4,
+      "rollNumber": "S004",
+      "age": 19,
+      "grade": "A"
+    },
+    {
+      "name": "Mike Brown",
+      "id": 5,
+      "rollNumber": "S005",
+      "age": 23,
+      "grade": "B"
+    },
+    {
+      "name": "Emily Davis",
+      "id": 6,
+      "rollNumber": "S006",
+      "age": 20,
+      "grade": "A"
+    },
+    {
+      "name": "Tom Harris",
+      "id": 7,
+      "rollNumber": "S007",
+      "age": 22,
+      "grade": "B"
+    },
+    {
+      "name": "Sophia Lee",
+      "id": 8,
+      "rollNumber": "S008",
+      "age": 21,
+      "grade": "A"
+    },
+    {
+      "name": "Oliver Martin",
+      "id": 9,
+      "rollNumber": "S009",
+      "age": 19,
+      "grade": "A"
+    },
+    {
+      "name": "Isabella Thompson",
+      "id": 10,
+      "rollNumber": "S010",
+      "age": 23,
+      "grade": "B"
+    },
+    {
+      "Name": "Venu",
+      "id": 11
+    },
+    {
+      "Name": "Venu",
+      "id": 12
+    },
+    {
+      "name": "Venu",
+      "rollNumber": "S011",
+      "age": 27,
+      "grade": "A",
+      "id": 13
+    }
+  ]
+}
